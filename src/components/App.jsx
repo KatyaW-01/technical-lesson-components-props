@@ -1,12 +1,18 @@
 import React from "react";
+import NavBar from "../../App/NavBar/NavBar";
+import Home from "../../App/Home/Home";
+import About from "../../App/About/About";
+
+import user from "../data/user"
+console.log(user)
 
 function App() {
   return (
     <div>
-      {/* add the <Navbar> component here */}
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
-    </div>
+      <NavBar />
+      <Home name={user.name} city={user.city} color={user.color} />
+      <About bio={user.bio} links={user.links} />
+  </div>
   );
 }
 
